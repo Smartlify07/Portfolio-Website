@@ -495,7 +495,8 @@ footer .contact-form form .btn {
 
   .tools h1 {
     font-size: 32px;
-    text-align: center;
+    text-align: left;
+    line-height: 1.2;
     align-self: flex-start;
   }
 
