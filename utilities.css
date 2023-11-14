@@ -60,9 +60,9 @@
   transition: background 0.5s;
 }
 
-.btn:hover {
+/* .btn:hover {
   background-color: hsl(234, 100%, 66%, 0.9);
-}
+} */
 
 .btn-primary {
   background-color: var(--primary);
@@ -71,5 +71,10 @@
 
 .btn-secondary {
   background-color: var(--secondary);
+  color: var(--white);
+}
+
+.btn-dark {
+  background-color: var(--dark);
   color: var(--white);
 }

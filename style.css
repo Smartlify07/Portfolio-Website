@@ -294,6 +294,34 @@ a:focus {
   animation-timing-function: ease-in;
 }
 
+/* About Page */
+.about.intro p {
+  margin-top: 10px;
+}
+
+/* Projects Page */
+
+.projects-page.projects-preview .projects-grid {
+  gap: 25px;
+}
+.languages {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.text-dark {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
 /* Footer */
 footer {
   position: relative;
@@ -350,7 +378,7 @@ footer .nav-links-footer a {
 
 footer .contact-form form {
   position: absolute;
-  top: -45%;
+  top: -30%;
   right: 6%;
   padding: 20px;
   border-radius: 20px;
@@ -436,7 +464,7 @@ footer .contact-form form .btn {
   .nav-links li a {
     position: relative;
     top: 40px;
-    left: 60px;
+    left: 80px;
     color: var(--white);
     font-size: 18px;
   }
