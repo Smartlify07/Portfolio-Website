@@ -415,11 +415,11 @@ footer .contact-form form .btn {
     position: absolute;
     right: 1000px;
     flex-direction: column;
-    top: -1vh;
+    top: -2vh;
     /* transform: translate(150%); */
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     align-items: flex-start;
     transition: right 0.5s;
     padding: 20px 5px;
@@ -428,15 +428,15 @@ footer .contact-form form .btn {
   }
   .active-nav {
     overflow: hidden;
-    right: -200px;
+    right: -30px;
   }
   .navbar .burger {
     display: block;
   }
   .nav-links li a {
     position: relative;
-    top: 130px;
-    left: 70px;
+    top: 40px;
+    left: 60px;
     color: var(--white);
     font-size: 18px;
   }
@@ -618,5 +618,36 @@ footer .contact-form form .btn {
 @media (width < 321px) {
   footer .contact-form form {
     width: 280px;
+  }
+}
+
+@media (width > 767px) and (width < 1100px) {
+  .projects-preview .container {
+    align-items: center;
+  }
+  .projects-preview .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  footer {
+    padding: 5rem 40px;
+  }
+
+  footer .header h1 {
+    font-size: 32px;
+  }
+
+  footer .container {
+    gap: 95px;
+  }
+
+  footer .nav-links-footer {
+    flex-direction: column;
+  }
+
+  footer .contact-form form {
+    top: -80px;
+    width: 320px;
   }
 }
