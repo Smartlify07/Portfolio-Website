@@ -44,14 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
           project.querySelectorAll(".languages .btn")
         ).map((btn) => btn.textContent.toLowerCase());
 
-        console.log(projectLang);
         if (projectLang.includes(selectedLang)) {
           project.style.display = "block";
         } else {
           project.style.display = "none";
         }
       });
-      btn.classList.toggle("btn-dark");
+      btn.classList.add("btn-dark");
       toggleBtn(btn);
     });
   });
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function toggleBtn(clickedbtn) {
     filter_btns.forEach((button) => {
       if (button === clickedbtn) {
-        button.classList.toggle("btn-dark");
+        button.classList.add("btn-dark");
       } else {
         button.classList.remove("btn-dark");
       }
