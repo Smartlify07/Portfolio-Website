@@ -317,7 +317,7 @@ a:focus {
   gap: 10px;
 }
 
-.text-dark {
+.projects-page.projects-preview .text-dark {
   font-size: 18px;
   margin-bottom: 14px;
 }
@@ -656,6 +656,10 @@ footer .contact-form form .btn {
   .projects-preview .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+  }
+
+  .projects-page.projects-preview .text-dark {
+    text-align: center;
   }
 
   footer {
