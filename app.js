@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     burger.addEventListener("click", () => {
       // Toggle burger to show X shape
+      const body = document.querySelector("body");
+      body.style.overflowX = "hidden";
       burger.classList.toggle("turn");
       navlinks.classList.toggle("active-nav");
     });

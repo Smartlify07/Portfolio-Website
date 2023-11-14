@@ -20,6 +20,7 @@ body {
   font-size: 16px;
   font-family: var(--open-sans);
   /* background-color: var(--dark); */
+  overflow-x: hidden;
 }
 
 ul {
@@ -68,13 +69,13 @@ a:focus {
   color: var(--secondary);
 }
 
-.navbar .nav-links {
+.nav-links {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-.navbar .nav-links a {
+.nav-links a {
   font-size: 20px;
   transition: 0.5s;
   color: var(--secondary);
@@ -407,38 +408,35 @@ footer .contact-form form .btn {
 
 /* Media queries */
 @media (width < 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .navbar .logo h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
   .nav-links {
     position: absolute;
-    right: 0;
+    right: 1000px;
     flex-direction: column;
-    top: 0vh;
-    transform: translate(150%);
-    display: none;
+    top: -1vh;
+    /* transform: translate(150%); */
     border-radius: 50%;
     width: 400px;
     height: 400px;
     align-items: flex-start;
-    transition: transform 0.5s;
+    transition: right 0.5s;
+    padding: 20px 5px;
+    background-color: var(--secondary);
+    overflow: hidden;
+  }
+  .active-nav {
+    overflow: hidden;
+    right: -200px;
   }
   .navbar .burger {
     display: block;
   }
-  .navbar .nav-links {
-    padding: 20px 5px;
-    background-color: var(--secondary);
-  }
-
-  .navbar .nav-links a {
+  .nav-links li a {
     position: relative;
-    top: 100px;
-    left: -50px;
+    top: 130px;
+    left: 70px;
     color: var(--white);
     font-size: 18px;
   }
@@ -453,19 +451,23 @@ footer .contact-form form .btn {
   /* Intro section */
   .intro .profile h1 {
     text-align: center;
-    font-size: 35px;
+    font-size: 32px;
   }
 
   .intro .profile p {
     margin-top: 16px;
-    text-align: center;
-    align-self: center;
+    text-align: left;
+    align-self: self-start;
     width: 100%;
     font-size: 16px;
   }
 
   /* Tools section */
+  /* .tools{
+
+  }
   .tools .tools-grid {
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
@@ -479,13 +481,62 @@ footer .contact-form form .btn {
     cursor: pointer;
     transition: 0.5s;
     box-shadow: 5px 5px 5px 5px 10px;
+  } */
+  .tools {
+    padding: 5rem 40px;
+    background-color: var(--secondary);
   }
 
+  .tools .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tools h1 {
+    font-size: 32px;
+    text-align: center;
+    align-self: flex-start;
+  }
+
+  .tools p {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    align-self: start;
+  }
+
+  .tools .tools-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 30px;
+  }
+
+  .tools .tools-grid .tool {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px 5px 10px;
+  }
   /* Project section */
   .projects-preview .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    margin-top: 0px;
+  }
+
+  .projects-preview h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
   }
 
   .projects-preview .container {
@@ -511,7 +562,7 @@ footer .contact-form form .btn {
 
   footer .header h1 {
     font-family: var(--playfair);
-    font-size: 48px;
+    font-size: 32px;
   }
 
   footer .header .icons {
@@ -523,7 +574,7 @@ footer .contact-form form .btn {
 
   footer .contact-form form {
     position: relative;
-    width: 400px;
+    width: 340px;
     top: 0;
     right: 0;
   }
@@ -540,8 +591,8 @@ footer .contact-form form .btn {
     width: 100%;
   }
 
-  .active-nav {
-    transform: translate(50%);
+  footer .contact-form form input {
+    width: 100%;
   }
 
   .turn .line-1 {
@@ -560,5 +611,11 @@ footer .contact-form form .btn {
 
   .navbar .burger > div {
     background-color: var(--dark);
+  }
+}
+
+@media (width < 321px) {
+  footer .contact-form form {
+    width: 280px;
   }
 }
