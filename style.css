@@ -420,6 +420,7 @@ footer .contact-form form .btn {
     flex-direction: column;
     top: 0vh;
     transform: translate(150%);
+    display: none;
     border-radius: 50%;
     width: 400px;
     height: 400px;
