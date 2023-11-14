@@ -65,3 +65,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+const form = document.querySelector("form");
+console.log(form);
+anime({
+  targets: "form",
+  translateY: 5,
+  easing: "easeInOutQuad",
+  duration: 1000,
+});
+
+anime({
+  targets: ".nav-links-footer li",
+  translateX: 5,
+  duration: 3000,
+  delay: 1000,
+  easing: "easeInOutQuad",
+});

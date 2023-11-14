@@ -160,6 +160,8 @@ a:focus {
 
 .tools .tools-grid .tool {
   width: 120px;
+  /* transform: translateY(-50%);
+  opacity: 0; */
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -167,7 +169,7 @@ a:focus {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
-  box-shadow: 5px 5px 5px 5px 10px;
+  box-shadow: 5px 5px 5px 5px 10px hsl(225, 5%, 17%);
 }
 .tools .tools-grid .tool:hover {
   transform: scale(105%);
@@ -382,7 +384,7 @@ footer .nav-links-footer a {
 
 footer .contact-form form {
   position: absolute;
-  top: -30%;
+  top: -25%;
   right: 6%;
   padding: 20px;
   border-radius: 20px;
@@ -560,6 +562,9 @@ footer .contact-form form .btn {
     box-shadow: 5px 5px 5px 5px 10px;
   }
   /* Project section */
+  .projects-preview {
+    padding: 3rem 40px;
+  }
   .projects-preview .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -654,6 +659,9 @@ footer .contact-form form .btn {
 }
 
 @media (width > 767px) and (width < 1100px) {
+  .projects-page.projects-preview {
+    padding: 8rem 40px;
+  }
   .projects-preview .container {
     align-items: center;
   }
